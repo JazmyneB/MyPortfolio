@@ -1,4 +1,3 @@
-import G from 'glob';
 import React, { useState } from 'react';
 
 const Portfolio = () => {
