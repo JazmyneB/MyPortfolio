@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import { validateEmail } from '../../utils/helpers';
 
+import GridContainer from '../Grid/GridContainer'
+import GridItem from '../Grid/GridItem';
+
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
@@ -34,7 +37,8 @@ function ContactForm() {
   };
 
   return (
-    <section>
+    <GridContainer justify="center">
+      <GridItem xs={12} sm={12} md={4}>
       <h1 data-testid="h1tag">Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
@@ -56,7 +60,8 @@ function ContactForm() {
         )}
         <button data-testid="button" type="submit">Submit</button>
       </form>
-    </section>
+    </GridItem>
+    </GridContainer>
   );
 }
 

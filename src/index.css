@@ -34,67 +34,51 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: #1F5673;
+  background: black;
   color: var(--light);
   font-family: 'Bradley Hand';
 
 }
 
-
-
-/* h1,
-h2,
-h3,
 h4,
-h5,
-h6 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  margin: 5px 0;
-  line-height: 1.25;
-} */
-
-/* h1 {
-  font-size: 2.25rem;
+h6,
+label {
+  color:rgb(240, 98, 146);
 }
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-} */
 
 h1 {
   font-size: 2.25rem;
+  color: white;
+  text-shadow: 2px 2px rgb(240, 98, 146);
+  border: solid;
+  border-radius: 5%;
+  border-inline-end-color: rgb(240, 98, 146);
+  border-block-start-color: rgb(240, 98, 146);
+  margin: 10px;
+  padding: 10px;
+  transform: translate(250%, 0);
+}
+h1 .title-page {
+  text-shadow: 2px 2px rgb(240, 98, 146);
 }
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  color:rgba(0, 0, 0, .65)
 }
+
 
 a {
-  color: var(--tertiary);
+  font-size: 1rem;
+  color: #e91e63;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* a:hover {
-  text-decoration: underline;
-} */
+
+a:hover {
+  text-decoration: overline underline;
+}
+
 
 /* Header Styling */
 header {
@@ -102,34 +86,14 @@ header {
   margin: auto;
   padding: 30px;
   height: 120px;
-  text-align: right;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+
 li {
-  float: left;
-}
-li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
+  color: #e91e63;
 }
 
-li .sect {
-  color: var(--light);
-}
-
-.dev {
-  color: var(--light);
-  text-align: left;
-  font-size: xx-large;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-  float: left;
+.error-text {
+  color:rgb(228, 46, 1);
 }
 
 header h2 {
@@ -247,7 +211,7 @@ nav  li {
 }
 
 textarea {
-	width: 600px;
+	width: 300px;
 	height: 120px;
 	border: 3px solid #cccccc;
 	padding: 5px;
