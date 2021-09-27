@@ -1,8 +1,13 @@
 import React from 'react';
+import DownloadLink from "react-download-link";
 
 import GridContainer from '../Grid/GridContainer'
 import GridItem from '../Grid/GridItem';
 import NavPills from '../NavPills/NavPills';
+import { Link } from '@material-ui/core';
+
+import resume from './Jazmyne_Bradley.pdf';
+
 
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,7 +25,7 @@ const Resume = () => {
   );
   
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
-
+  
 
     return (
               <GridContainer justify="center">
@@ -49,8 +54,10 @@ const Resume = () => {
                     <li>JEST</li>
                     </ul>
                           </GridItem>
+                          <GridItem xs={12} sm={12} md={4}>
+                            <a href={resume} download>My Resume</a>
+                            </GridItem>
                         </GridContainer>
-        
     )
 }
 

@@ -75,10 +75,29 @@ const Portfolio = () => {
         // }
     ])
 
+    const [modalContent, setModalContent] = useState({
+      title: 'Code Quiz',
+      image: 'code-quiz2.jpeg',
+      description: 'A timed quiz to test your coding knowledge.',
+      hub: 'https://github.com/JazmyneB/JazmyneB.github.io/tree/main/code-quiz',
+      live: 'https://jazmyneb.github.io/code-quiz/'
+
+  });
+
     const [open, setOpen] = useState(false);
     const [currentProject, setCurrentProject] = useState();
-    const handleOpen = () => {
+    const handleOpen = (event) => {
         setOpen(true)
+        console.log(event.target.attributes[1].value)
+        const index = event.target.attributes[1].value;
+        setModalContent({
+          title: projects[index].title,
+          description: projects[index].description,
+          hub: projects[index].hub,
+          live: projects[index].live
+
+      })
+
     };
     const handleClose = () => setOpen(false);
 
@@ -100,38 +119,56 @@ const Portfolio = () => {
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="Silver Stream"
+                              id = "0"
                               src={require("../../assets/project/silver-stream.png").default}
                               className={navImageClasses}
                               onClick={handleOpen}
                             />
                             <img
-                              alt="Weather Forecast"
-                              src={require("../../assets/project/weather2.jpeg").default}
+                              alt="Food Festival"
+                              id="1"
+                              src={require("../../assets/project/food-festival2.JPG").default}
                               className={navImageClasses}
                               onClick={handleOpen}
                             />
                             <img
-                              alt="Food Festival"
-                              src={require("../../assets/project/food-festival2.JPG").default}
+                              alt="Daily Scheduler"
+                              id = "2"
+                              src={require("../../assets/project/weekly2.jpeg").default}
                               className={navImageClasses}
                               onClick={handleOpen}
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
                             <img
-                              alt="Daily Scheduler"
-                              src={require("../../assets/project/weekly2.jpeg").default}
+                              alt="Weather Forecast"
+                              id = "3"
+                              src={require("../../assets/project/weather2.jpeg").default}
                               className={navImageClasses}
                               onClick={handleOpen}
                             />
                             <img
                               alt="Code Quiz"
+                              id="4"
                               src={require("../../assets/project/code-quiz2.jpeg").default}
                               className={navImageClasses}
                               onClick={handleOpen}
                             />
-                            {projects.map((project, i) => (
-                            <Modal currentProject = {project} open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                            <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                                <Box sx={style}>
+                                    <Typography id="modal-modal-title" variant="h4" components="h4">
+                                        {modalContent.title}
+                                        </Typography>
+                                    <Typography id="modal-modal-description" sx={{ mt:2 }}>
+                                    {modalContent.description}
+                                    <p><a href={modalContent.hub}>GitHub Repo</a></p>
+                                    <p><a href={modalContent.live}>Deployed Site</a></p>
+                                    </Typography>
+
+                                </Box>
+                                </Modal>
+                            {/* {projects.map((project, i) => (
+                            <Modal key = {project.name} id={i} open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
                                 <Box sx={style}>
                                     <Typography id="modal-modal-title" variant="h4" components="h4">
                                         {project.title}
@@ -144,7 +181,7 @@ const Portfolio = () => {
 
                                 </Box>
                                 </Modal>
-                            ))}
+                            ))} */}
 
                           </GridItem>
                         </GridContainer>

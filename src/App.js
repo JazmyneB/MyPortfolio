@@ -75,15 +75,15 @@ function App(props) {
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Jazzie Babbyyy</h3>
+                    <h3 className={classes.title}>Jazmyne Bradley</h3>
                     <h6>SOFWARE DEVELOPER</h6>
-                    <Button justIcon link className={classes.margin5} onClick={()=> window.open('https://github.com/JazmyneB')}>
+                    <Button justIcon className={classes.margin5} onClick={()=> window.open('https://github.com/JazmyneB')}>
                       <GitHubIcon sx={{ color: pink[400] }}> </GitHubIcon>
                     </Button>
-                    <Button justIcon link className={classes.margin5} onClick={()=> window.open('https://linkedin.com/in/jazmynebradley)}')}>
+                    <Button justIcon className={classes.margin5} onClick={()=> window.open('https://linkedin.com/in/jazmynebradley)}')}>
                       <LinkedInIcon sx={{ color: pink[400] }}></LinkedInIcon>
                     </Button>
-                    <Button justIcon link className={classes.margin5} onClick={() => window.open("mailto:bradleyj1@email.arizona.edu")}>
+                    <Button justIcon className={classes.margin5} onClick={() => window.open("mailto:bradleyj1@email.arizona.edu")}>
                       <MarkEmailUnreadIcon sx={{ color: pink[400] }}></MarkEmailUnreadIcon>
                     </Button>
                   </div>
