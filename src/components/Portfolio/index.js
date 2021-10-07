@@ -66,13 +66,13 @@ const Portfolio = () => {
             live: 'https://jazmyneb.github.io/code-quiz/'
 
         },
-        // {
-        //     title: 'Project 6',
-        //     image:
-        //     description: 'This here',
-        //     github: 'linking',
-        //     live: 'live site'
-        // }
+        {
+            title: 'TheDM',
+            image:
+            description: 'This app was made for people to chat together about topics',
+            github: 'https://github.com/tbegush/theDM/',
+            live: 'thedm.herokuapp.com'
+        }
     ])
 
     const [modalContent, setModalContent] = useState({
@@ -150,6 +150,13 @@ const Portfolio = () => {
                             <img
                               alt="Code Quiz"
                               id="4"
+                              src={require("../../assets/project/code-quiz2.jpeg").default}
+                              className={navImageClasses}
+                              onClick={handleOpen}
+                            />
+                            <img
+                              alt="TheDM"
+                              id="5"
                               src={require("../../assets/project/code-quiz2.jpeg").default}
                               className={navImageClasses}
                               onClick={handleOpen}
